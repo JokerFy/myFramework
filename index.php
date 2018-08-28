@@ -7,16 +7,24 @@
  */
 
 define('FYL',__DIR__);
-define('Core',FYL.'/Core');
-define('APP',FYL.'/App');
-
+define('Core',FYL.'/core');
+define('APP',FYL.'/app');
+define('application','\app');
 define('DEBUG',true);
 
+//引入composer类库
+include "vendor/autoload.php";
+
 if(DEBUG){
+    $whoops = new Whoops\Run();
+    $errorTitle = '框架出错了！';
+    $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler());
+    $whoops->register();
     ini_set('display_errors','On');
 }else{
     ini_set('display_errors','Off');
 }
+
 include Core.'/Fyl.php';
 include Core.'/common/function.php';
 
