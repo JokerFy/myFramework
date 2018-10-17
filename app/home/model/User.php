@@ -40,4 +40,8 @@ class User extends Model
         $ret = $this->select($this->table,"*");
         return $ret;
     }
+
+    public static function test(){
+        return '123';
+    }
 }

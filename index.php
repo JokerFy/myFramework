@@ -31,3 +31,7 @@ include Core.'/common/function.php';
 spl_autoload_register('\\Core\\Fyl::autoload');   //当访问不存在的类时自动调用该方法引入类库文件
 
 \Core\Fyl::run();
+
+
+$test = new \algorithm\BubbleSort();
+$test->main();

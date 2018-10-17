@@ -7,19 +7,14 @@
  */
 namespace app\home\controller;
 
-use app\home\model\User;
 use core\Fyl;
-use core\lib\Config;
-use core\lib\Log;
-use core\lib\Model;
 
 class Index extends Fyl
 {
     //所有留言
     public function index()
     {
-
-        $this->assign('data',$var);
+//        $this->assign('data',$var);
         $this->display();
     }
 
