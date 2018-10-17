@@ -61,4 +61,8 @@ class Route
             $this->action = Config::get('action','route');
         }
     }
+
+    public static function test(){
+        return "123";
+    }
 }
